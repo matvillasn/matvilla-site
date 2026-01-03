@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Peinture LUMINA - Gamme Complète | Matvilla Dakar</title>
+    <meta name="description"
+        content="Découvrez la gamme complète LUMINA : Fachadas, Satinado et Mate. Peintures acryliques fabriquées en Espagne pour le climat africain.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Toast CSS -->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container flex-between">
+            <a href="index.html" class="logo">
+                <span class="mat">MAT</span><span class="villa">VILLA</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="produits.html" class="nav-link active">Nos Produits</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="a-propos.html" class="nav-link">À Propos</a>
+                <a href="espace-pro.html" class="nav-link">Espace Pro</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <a href="contact.html" class="btn btn-primary" onclick="preselectDevis(event)">
+                Devis Gratuit
+            </a>
+
+            <!-- Menu mobile toggle -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="hero-pattern" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden;">
+          
+          <!-- Rangée haute -->
+          <i class="fas fa-hammer" style="position: absolute; top: 10%; left: 8%; font-size: 70px; color: rgba(255,255,255,0.08); transform: rotate(-15deg);"></i>
+          <i class="fas fa-paint-roller" style="position: absolute; top: 15%; left: 25%; font-size: 55px; color: rgba(255,255,255,0.1); transform: rotate(20deg);"></i>
+          <i class="fas fa-hard-hat" style="position: absolute; top: 12%; left: 45%; font-size: 65px; color: rgba(255,255,255,0.09); transform: rotate(-10deg);"></i>
+          <i class="fas fa-tools" style="position: absolute; top: 18%; right: 30%; font-size: 60px; color: rgba(255,255,255,0.1); transform: rotate(15deg);"></i>
+          <i class="fas fa-wrench" style="position: absolute; top: 8%; right: 12%; font-size: 50px; color: rgba(255,255,255,0.08); transform: rotate(-20deg);"></i>
+          
+          <!-- Rangée milieu -->
+          <i class="fas fa-ruler-combined" style="position: absolute; top: 40%; left: 5%; font-size: 55px; color: rgba(255,255,255,0.09); transform: rotate(25deg);"></i>
+          <i class="fas fa-home" style="position: absolute; top: 45%; left: 35%; font-size: 75px; color: rgba(255,255,255,0.12); transform: rotate(10deg);"></i>
+          <i class="fas fa-building" style="position: absolute; top: 42%; right: 20%; font-size: 70px; color: rgba(255,255,255,0.1); transform: rotate(-8deg);"></i>
+          <i class="fas fa-paint-brush" style="position: absolute; top: 48%; right: 5%; font-size: 48px; color: rgba(255,255,255,0.08); transform: rotate(18deg);"></i>
+          
+          <!-- Rangée basse -->
+          <i class="fas fa-hammer" style="position: absolute; bottom: 15%; left: 15%; font-size: 52px; color: rgba(255,255,255,0.09); transform: rotate(-25deg);"></i>
+          <i class="fas fa-screwdriver" style="position: absolute; bottom: 18%; left: 38%; font-size: 58px; color: rgba(255,255,255,0.1); transform: rotate(12deg);"></i>
+          <i class="fas fa-toolbox" style="position: absolute; bottom: 12%; right: 35%; font-size: 62px; color: rgba(255,255,255,0.11); transform: rotate(-15deg);"></i>
+          <i class="fas fa-hard-hat" style="position: absolute; bottom: 20%; right: 8%; font-size: 68px; color: rgba(255,255,255,0.09); transform: rotate(22deg);"></i>
+          
+          <!-- Icônes supplémentaires pour remplir les espaces -->
+          <i class="fas fa-paint-roller" style="position: absolute; top: 28%; left: 18%; font-size: 45px; color: rgba(255,255,255,0.07); transform: rotate(-12deg);"></i>
+          <i class="fas fa-wrench" style="position: absolute; top: 35%; right: 42%; font-size: 52px; color: rgba(255,255,255,0.08); transform: rotate(28deg);"></i>
+          <i class="fas fa-ruler" style="position: absolute; bottom: 35%; left: 28%; font-size: 48px; color: rgba(255,255,255,0.09); transform: rotate(-18deg);"></i>
+          <i class="fas fa-tools" style="position: absolute; bottom: 40%; right: 18%; font-size: 55px; color: rgba(255,255,255,0.1); transform: rotate(16deg);"></i>
+          
+        </div>
+        <div class="container">
+            <div class="page-header-content scroll-animate">
+                <p class="section-subtitle">Notre Marque</p>
+                <h1>Peinture LUMINA</h1>
+                <p class="page-header-description">
+                    Gamme complète de peintures acryliques fabriquées en Espagne, spécialement conçues pour résister au
+                    climat africain. Qualité professionnelle garantie.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUIT 1: FACHADAS ===== -->
+    <section id="fachadas">
+        <div class="container">
+            <div class="card-product scroll-animate">
+                <div class="product-image">
+                    <img src="assets/products/lumina-fachadas.jpg" alt="LUMINA Fachadas">
+                </div>
+                <div class="product-content">
+                    <span class="product-badge">🇪🇸 Fabricado en España</span>
+                    <h2 class="product-title">LUMINA Fachadas</h2>
+                    <p class="product-subtitle">Peinture Acrylique Extérieure</p>
+                    <p class="product-description">
+                        Spécialement formulée pour résister aux conditions climatiques extrêmes d'Afrique, LUMINA
+                        Fachadas est la solution idéale pour protéger et embellir vos façades. Sa résistance
+                        exceptionnelle aux UV garantit une tenue parfaite face au soleil intense.
+                    </p>
+
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Résistance UV exceptionnelle</strong> - Protection maximale contre le soleil
+                                africain intense</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Anti-intempéries</strong> - Résiste à la pluie, à l'humidité et aux variations
+                                de température</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Application facile</strong> - Séchage rapide et excellent rendement</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Pouvoir couvrant élevé</strong> - Moins de couches nécessaires, économie
+                                garantie</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Lavable</strong> - Nettoyage facile pour un entretien simplifié</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-lg);">
+                        <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+                        <a href="contact.html" class="btn btn-outline">Où acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUIT 2: SATINADO ===== -->
+    <section class="section-gray" id="satinado">
+        <div class="container">
+            <div class="card-product reverse scroll-animate">
+                <div class="product-image">
+                    <img src="assets/products/lumina-satinado.jpeg" alt="LUMINA Satinado">
+                </div>
+                <div class="product-content">
+                    <span class="product-badge">🇪🇸 Fabricado en España</span>
+                    <h2 class="product-title">LUMINA Satinado</h2>
+                    <p class="product-subtitle">Peinture Satinée Intérieur-Extérieur</p>
+                    <p class="product-description">
+                        Polyvalente et élégante, LUMINA Satinado offre une finition satinée parfaite pour tous vos
+                        espaces. Idéale pour les grandes surfaces, elle garantit une couverture uniforme et un aspect
+                        professionnel durable.
+                    </p>
+
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Application facile</strong> - Résultat uniforme même pour les grandes
+                                surfaces</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Finition satinée élégante</strong> - Apporte lumière et profondeur à vos
+                                murs</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Lavable et résistante</strong> - Parfait pour les pièces à fort passage</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Intérieur-Extérieur</strong> - Une seule peinture pour tous vos besoins</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Excellente adhérence</strong> - S'applique sur tous types de supports</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-lg);">
+                        <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+                        <a href="contact.html" class="btn btn-outline">Où acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUIT 3: MATE ===== -->
+    <section id="mate">
+        <div class="container">
+            <div class="card-product scroll-animate">
+                <div class="product-image">
+                    <img src="assets/products/lumina-mate.jpeg" alt="LUMINA Mate">
+                </div>
+                <div class="product-content">
+                    <span class="product-badge">🇪🇸 Fabricado en España</span>
+                    <h2 class="product-title">LUMINA Mate</h2>
+                    <p class="product-subtitle">Peinture Mate Intérieur-Extérieur</p>
+                    <p class="product-description">
+                        Pour un rendu moderne et sophistiqué, LUMINA Mate offre une finition veloutée exceptionnelle.
+                        Idéale pour masquer les imperfections, elle crée des ambiances élégantes et contemporaines.
+                    </p>
+
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Finition mate profonde</strong> - Aspect velouté et raffiné</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Cache les imperfections</strong> - Parfait pour les murs présentant de légères
+                                irrégularités</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Polyvalent</strong> - Convient à l'intérieur comme à l'extérieur</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Excellent pouvoir couvrant</strong> - Résultat optimal en moins de
+                                couches</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span><strong>Sans reflet</strong> - Crée des ambiances contemporaines et apaisantes</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-lg);">
+                        <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+                        <a href="contact.html" class="btn btn-outline">Où acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OUTILS & ACCESSOIRES ===== -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <p class="section-subtitle">Complétez votre projet</p>
+                <h2>Outils & Accessoires</h2>
+                <p>Découvrez notre sélection d'outils professionnels pour une application parfaite de vos peintures
+                    LUMINA.</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="card scroll-animate">
+                    <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="card-title">Pinceaux Pro</h3>
+                    <p class="card-description">Pinceaux haute qualité pour finitions précises</p>
+                </div>
+
+                <div class="card scroll-animate delay-100">
+                    <div class="card-icon"><i class="fas fa-paint-roller"></i></div>
+                    <h3 class="card-title">Rouleaux</h3>
+                    <p class="card-description">Large choix de rouleaux adaptés à chaque surface</p>
+                </div>
+
+                <div class="card scroll-animate delay-200">
+                    <div class="card-icon"><i class="fas fa-box"></i></div>
+                    <h3 class="card-title">Bâches & Protection</h3>
+                    <p class="card-description">Protection complète pour vos chantiers</p>
+                </div>
+
+                <div class="card scroll-animate delay-300">
+                    <div class="card-icon"><i class="fas fa-flask"></i></div>
+                    <h3 class="card-title">Préparation</h3>
+                    <p class="card-description">Enduits, apprêts et produits de préparation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ESPACE PRO ===== -->
+    <section>
+        <div class="container">
+            <div class="card scroll-animate" style="text-align: center; padding: var(--spacing-xl);">
+                <div class="club-badge" style="margin-bottom: var(--spacing-md);"><i class="fas fa-star"></i> Professionnels</div>
+                <h2>Tarifs préférentiels pour les pros</h2>
+                <p style="max-width: 600px; margin: var(--spacing-md) auto;">
+                    Rejoignez le Club Maître LUMINA et bénéficiez de remises exclusives sur toute la gamme, formations
+                    gratuites et support technique dédié.
+                </p>
+                <a href="espace-pro.html" class="btn btn-primary btn-large">
+                    Rejoindre le Club Maître LUMINA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo" style="display: inline-block; margin-bottom: var(--spacing-md);">
+                        <span class="mat">MAT</span><span class="villa">VILLA</span>
+                    </a>
+                    <p>De la fondation à la finition. Votre partenaire BTP de confiance à Dakar.</p>
+                </div>
+
+                <div>
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Nos Produits</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="espace-pro.html">Espace Pro</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Produits LUMINA</h4>
+                    <ul>
+                        <li><a href="produits.html#fachadas">Fachadas Exterior</a></li>
+                        <li><a href="produits.html#satinado">Satinado</a></li>
+                        <li><a href="produits.html#mate">Mate</a></li>
+                        <li><a href="espace-pro.html">Club Maître LUMINA</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Suivez-nous</h4>
+                    <div class="flex" style="gap: var(--spacing-sm); margin-top: var(--spacing-sm);">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matvilla. Tous droits réservés. | <a href="#">Mentions légales</a> | <a
+                        href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- EmailJS Handler -->
+    <script src="js/emailjs-handler.js"></script>
+</body>
+
+</html>

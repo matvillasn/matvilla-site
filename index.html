@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Matvilla - De la fondation à la finition | BTP et Peinture LUMINA à Dakar</title>
+    <meta name="description"
+        content="Matvilla, votre partenaire BTP à Dakar. Spécialiste en peinture LUMINA, électricité, plomberie, carrelage. Solutions professionnelles pour vos projets.">
+    <meta name="keywords" content="BTP Dakar, peinture Sénégal, LUMINA, construction Dakar, électricité, plomberie">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Matvilla - De la fondation à la finition">
+    <meta property="og:description" content="Votre partenaire BTP à Dakar. Peinture LUMINA et solutions complètes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matvilla.com">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Toast CSS -->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header transparent" id="header">
+        <div class="container flex-between">
+            <a href="index.html" class="logo">
+                <span class="mat">MAT</span><span class="villa">VILLA</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="produits.html" class="nav-link">Nos Produits</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="a-propos.html" class="nav-link">À Propos</a>
+                <a href="espace-pro.html" class="nav-link">Espace Pro</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <a href="contact.html" class="btn btn-primary" onclick="preselectDevis(event)">
+                Devis Gratuit
+            </a>
+
+            <!-- Menu mobile toggle -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <img src="assets/hero-background.jpg" alt="Chantier BTP" class="hero-background">
+
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">De la fondation à la finition.</h1>
+                <p class="hero-subtitle">
+                    Votre partenaire BTP de confiance à Dakar. Matériaux de qualité, peinture LUMINA et expertise
+                    professionnelle pour tous vos projets de construction.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="produits.html" class="btn btn-primary btn-large">
+                        Découvrir LUMINA
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        Nous Contacter
+                    </a>
+                </div>
+
+                <div class="badges hero-badges">
+                    <div class="badge">
+                        <span class="badge-icon"><i class="fas fa-building"></i></span>
+                        Commercial
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon"><i class="fas fa-home"></i></span>
+                        Résidentiel
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon"><i class="fas fa-cog"></i></span>
+                        Sur Mesure
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MISSION SECTION ===== -->
+    <section>
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <p class="section-subtitle">Notre Mission</p>
+                <h2>Bâtir l'excellence, projet après projet</h2>
+                <p>
+                    Fondée à Dakar, MATVILLA est une entreprise sénégalaise spécialisée 
+                    dans la production de matériaux de construction de haute qualité 
+                    et la distribution exclusive de la marque de peinture LUMINA. 
+                    Nous nous positionnons comme un acteur clé du BTP, 
+                    offrant des solutions intégrées "Gros Œuvre & Finition" 
+                    pour des projets durables et esthétiques.
+                </p>
+            </div>
+
+            <div class="stats scroll-animate delay-200">
+                <div class="stat-item">
+                    <div class="stat-number counter" data-count="10">0</div>
+                    <div class="stat-label">Ans d'expérience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-count="100">0</div>
+                    <div class="stat-label">Projets réalisés</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-count="50">0</div>
+                    <div class="stat-label">Artisans partenaires</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISION & MISSION ===== -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <p class="section-subtitle">Notre Engagement</p>
+                <h2>Notre Vision & Mission</h2>
+            </div>
+
+            <div class="grid grid-2" style="gap: var(--spacing-xl); margin-top: var(--spacing-xl);">
+                <div class="scroll-animate">
+                    <h3 style="color: var(--orange-primary); font-size: var(--font-size-lg); margin-bottom: var(--spacing-md);">Vision</h3>
+                    <p style="font-size: var(--font-size-md); color: var(--gray); line-height: 1.8;">
+                        Devenir le leader sénégalais des solutions BTP intégrées, reconnue pour l'excellence de ses matériaux et la performance de ses finitions.
+                    </p>
+                </div>
+
+                <div class="scroll-animate delay-100">
+                    <h3 style="color: var(--orange-primary); font-size: var(--font-size-lg); margin-bottom: var(--spacing-md);">Mission</h3>
+                    <ul style="list-style: none; padding: 0; font-size: var(--font-size-md); color: var(--gray); line-height: 1.8;">
+                        <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-md); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--orange-primary); font-weight: bold;">•</span>
+                            Fournir des matériaux de construction robustes, adaptés aux défis climatiques et aux exigences architecturales du Sénégal.
+                        </li>
+                        <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-md); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--orange-primary); font-weight: bold;">•</span>
+                            Introduire des technologies de peinture innovantes pour garantir la longévité, la sécurité et l'esthétisme des ouvrages.
+                        </li>
+                        <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-md); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--orange-primary); font-weight: bold;">•</span>
+                            Contribuer au développement des infrastructures et à l'amélioration du cadre de vie au Sénégal.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== APERÇU PRODUITS LUMINA ===== -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <p class="section-subtitle">Notre Marque</p>
+                <h2>Peinture LUMINA - Qualité Espagnole</h2>
+                <p>Découvrez notre gamme exclusive de peintures acryliques, fabriquées en Espagne pour répondre aux
+                    exigences du climat africain.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card scroll-animate card-stagger-1">
+                    <img src="assets/products/lumina-fachadas.jpg" alt="LUMINA Fachadas"
+                        style="border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <span class="product-badge">🇪🇸 Fabricado en España</span>
+                    <h3 class="card-title">LUMINA Fachadas</h3>
+                    <p class="card-description">
+                        Résistance exceptionnelle aux UV et aux intempéries. La solution durable pour le soleil
+                        africain.
+                    </p>
+                    <a href="produits.html#fachadas" class="card-link">
+                        En savoir plus →
+                    </a>
+                </div>
+
+                <div class="card scroll-animate card-stagger-2">
+                    <img src="assets/products/lumina-satinado.jpeg" alt="LUMINA Satinado"
+                        style="border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <span class="product-badge">🇪🇸 Fabricado en España</span>
+                    <h3 class="card-title">LUMINA Satinado</h3>
+                    <p class="card-description">
+                        Application facile et aspect uniforme. La meilleure couvrance pour vos grands espaces.
+                    </p>
+                    <a href="produits.html#satinado" class="card-link">
+                        En savoir plus →
+                    </a>
+                </div>
+
+                <div class="card scroll-animate card-stagger-3">
+                    <img src="assets/products/lumina-mate.jpeg" alt="LUMINA Mate"
+                        style="border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <span class="product-badge">🇪🇸 Fabricado en España</span>
+                    <h3 class="card-title">LUMINA Mate</h3>
+                    <p class="card-description">
+                        Finition mate profonde et raffinée. Cache parfaitement les imperfections.
+                    </p>
+                    <a href="produits.html#mate" class="card-link">
+                        En savoir plus →
+                    </a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: var(--spacing-lg);">
+                <a href="produits.html" class="btn btn-primary btn-large">
+                    Voir toute la gamme LUMINA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CATÉGORIES DE SERVICES ===== -->
+    <section>
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <p class="section-subtitle">Nos Spécialités</p>
+                <h2>Une expertise complète pour vos projets</h2>
+            </div>
+
+            <div class="grid grid-3">
+                <a href="services.html#electricite" class="card-category scroll-animate card-stagger-1">
+                    <img src="assets/categories/electricite.jpg" alt="Électricité" class="card-category-image">
+                    <div class="card-category-overlay">
+                        <h3 class="card-category-title"><i class="fas fa-bolt"></i> Électricité</h3>
+                        <p class="card-category-description">Installation et maintenance électrique professionnelle</p>
+                    </div>
+                </a>
+
+                <a href="services.html#peinture" class="card-category scroll-animate card-stagger-2">
+                    <img src="assets/categories/peinture.jpg" alt="Peinture" class="card-category-image">
+                    <div class="card-category-overlay">
+                        <h3 class="card-category-title"><i class="fas fa-paint-roller"></i> Peinture LUMINA</h3>
+                        <p class="card-category-description">Gamme complète de peintures acryliques haute qualité</p>
+                    </div>
+                </a>
+
+                <a href="services.html#plomberie" class="card-category scroll-animate card-stagger-3">
+                    <img src="assets/categories/plomberie.jpg" alt="Plomberie" class="card-category-image">
+                    <div class="card-category-overlay">
+                        <h3 class="card-category-title"><i class="fas fa-wrench"></i> Plomberie</h3>
+                        <p class="card-category-description">Solutions complètes en plomberie et sanitaire</p>
+                    </div>
+                </a>
+
+                <a href="services.html#brique" class="card-category scroll-animate card-stagger-4">
+                    <img src="assets/categories/brique.jpg" alt="Brique Vibré" class="card-category-image">
+                    <div class="card-category-overlay">
+                        <h3 class="card-category-title"><i class="fas fa-cube"></i> Brique Vibré</h3>
+                        <p class="card-category-description">Matériaux de construction robustes et durables</p>
+                    </div>
+                </a>
+
+                <a href="services.html#carrelage" class="card-category scroll-animate card-stagger-5">
+                    <img src="assets/categories/carrelage.jpg" alt="Carrelage" class="card-category-image">
+                    <div class="card-category-overlay">
+                        <h3 class="card-category-title"><i class="fas fa-th-large"></i> Carrelage</h3>
+                        <p class="card-category-description">Large sélection de carreaux pour tous les styles</p>
+                    </div>
+                </a>
+
+                <a href="services.html#plafonnage" class="card-category scroll-animate card-stagger-6">
+                    <img src="assets/categories/plafonnage.jpg" alt="Plafonnage" class="card-category-image">
+                    <div class="card-category-overlay">
+                        <h3 class="card-category-title"><i class="fas fa-square"></i> Plafonnage</h3>
+                        <p class="card-category-description">Finitions plafonds et enduits professionnels</p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: var(--spacing-lg);">
+                <a href="services.html" class="btn btn-primary btn-large">
+                    Découvrir tous nos services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOS RÉALISATIONS ===== -->
+    <section>
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <p class="section-subtitle">Portfolio</p>
+                <h2>Ils nous font confiance</h2>
+                <p style="max-width: 700px; margin: 0 auto;">
+                    De la villa privée aux grands projets institutionnels, MATVILLA est le partenaire des bâtisseurs exigeants.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card card-adjust-top hover-lift scroll-animate card-stagger-1">
+                    <img src="assets/realisations/villa-senegalaise-traditionnelle.jpeg" alt="Villa traditionnelle sénégalaise avec peinture LUMINA" 
+                        style="border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <h3 class="card-title">Villas Sénégalaises</h3>
+                    <p class="card-description">
+                        Architecture traditionnelle sublimée par LUMINA
+                    </p>
+                </div>
+
+                <div class="card hover-lift scroll-animate card-stagger-2">
+                    <img src="assets/realisations/immeuble-residentiel-lumina.jpeg" alt="Projet résidentiel LUMINA - Immeuble moderne" 
+                        style="border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <h3 class="card-title">Projets Commerciaux</h3>
+                    <p class="card-description">
+                        Peintures durables pour espaces professionnels
+                    </p>
+                </div>
+
+                <div class="card hover-lift scroll-animate card-stagger-3">
+                    <img src="assets/realisations/immeuble-residentiel-gris.jpeg" alt="Projet institutionnel LUMINA - Immeuble résidentiel moderne" 
+                        style="border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <h3 class="card-title">Projets Institutionnels</h3>
+                    <p class="card-description">
+                        Solutions BTP pour infrastructures publiques
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ESPACE PRO ===== -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="card scroll-animate" style="text-align: center; padding: var(--spacing-xl);">
+                <div class="club-badge" style="margin-bottom: var(--spacing-md);"><i class="fas fa-star"></i> Exclusif Professionnels</div>
+                <h2>Vous êtes peintre ou entrepreneur ?</h2>
+                <p style="max-width: 600px; margin: var(--spacing-md) auto;">
+                    Rejoignez le réseau Maître LUMINA. Bénéficiez de formations gratuites, de tarifs préférentiels et récompensez votre fidélité à chaque seau acheté.
+                </p>
+                <a href="espace-pro.html" class="btn btn-primary btn-large">
+                    Devenir Maître LUMINA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo" style="display: inline-block; margin-bottom: var(--spacing-md);">
+                        <span class="mat">MAT</span><span class="villa">VILLA</span>
+                    </a>
+                    <p>De la fondation à la finition. Votre partenaire BTP de confiance à Dakar.</p>
+                </div>
+
+                <div>
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Nos Produits</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="espace-pro.html">Espace Pro</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Produits LUMINA</h4>
+                    <ul>
+                        <li><a href="produits.html#fachadas">Fachadas Exterior</a></li>
+                        <li><a href="produits.html#satinado">Satinado</a></li>
+                        <li><a href="produits.html#mate">Mate</a></li>
+                        <li><a href="espace-pro.html">Club Maître LUMINA</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Suivez-nous</h4>
+                    <div class="flex" style="gap: var(--spacing-sm); margin-top: var(--spacing-sm);">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matvilla. Tous droits réservés. | <a href="#">Mentions légales</a> | <a
+                        href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- EmailJS Handler -->
+    <script src="js/emailjs-handler.js"></script>
+</body>
+
+</html>

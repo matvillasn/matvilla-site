@@ -1,0 +1,122 @@
+/* ================================
+   MATVILLA - Reset CSS
+   Normalisation navigateurs
+   ================================ */
+
+/* === RESET DE BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* === TYPOGRAPHIE === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: var(--font-size-hero);
+}
+
+h2 {
+    font-size: var(--font-size-xxl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+}
+
+h4 {
+    font-size: var(--font-size-lg);
+}
+
+h5 {
+    font-size: var(--font-size-md);
+}
+
+h6 {
+    font-size: var(--font-size-sm);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* === LIENS === */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+/* Liens normaux (pas les boutons, logos, nav-link, service-nav-link) */
+a:not(.btn):not(.logo):not(.nav-link):not(.service-nav-link):hover {
+    color: var(--orange-primary);
+}
+
+/* === IMAGES === */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === LISTES === */
+ul,
+ol {
+    list-style: none;
+}
+
+/* === BOUTONS === */
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* === FORMULAIRES === */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+}
+
+/* === RESPONSIVE IMAGES === */
+picture {
+    display: block;
+}
+
+/* === ACCESSIBILITÉ === */
+:focus-visible {
+    outline: 2px solid var(--orange-primary);
+    outline-offset: 4px;
+}

@@ -1,0 +1,339 @@
+/* ================================
+   MATVILLA - Animations
+   Toutes les animations du site
+   ================================ */
+
+/* === KEYFRAMES === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* === CLASSES D'ANIMATION === */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease-out;
+}
+
+/* === DÉLAIS D'ANIMATION === */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+}
+
+/* === ANIMATIONS AU SCROLL (géré par JS) === */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === ANIMATIONS HOVER === */
+.hover-lift {
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.hover-scale {
+    transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* === ANIMATIONS ICÔNES === */
+.icon-rotate:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* === LOADING STATES === */
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid var(--gray-light);
+    border-top-color: var(--orange-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* === PROGRESS BAR === */
+.progress-bar {
+    height: 4px;
+    background: var(--gray-light);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--orange-primary);
+    width: 0;
+    transition: width 1.5s ease-out;
+}
+
+.progress-fill.animate {
+    width: 100%;
+}
+
+/* === COMPTEUR ANIMÉ === */
+.counter {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.counter.counting {
+    opacity: 1;
+}
+
+/* === PARALLAX (géré par JS) === */
+.parallax {
+    transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* === MOBILE - Réduire animations === */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* === ANIMATIONS SPÉCIFIQUES MATVILLA === */
+
+/* Hero Title Animation */
+.hero-title {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    animation: fadeInUp 1s ease-out 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    font-weight: var(--font-weight-bold);  /* ou 700 */
+}
+
+.hero-cta {
+    animation: fadeInUp 1s ease-out 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero-badges {
+    animation: fadeInUp 1s ease-out 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Badge Float Animation */
+.badge-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Card Stagger Effect (géré par JS avec classes) */
+.card-stagger-1 {
+    transition-delay: 0s;
+}
+
+.card-stagger-2 {
+    transition-delay: 0.1s;
+}
+
+.card-stagger-3 {
+    transition-delay: 0.2s;
+}
+
+.card-stagger-4 {
+    transition-delay: 0.3s;
+}
+
+.card-stagger-5 {
+    transition-delay: 0.4s;
+}
+
+.card-stagger-6 {
+    transition-delay: 0.5s;
+}
+
+/* Image Zoom Hover */
+.image-zoom-container {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.image-zoom {
+    transition: transform 0.6s ease-out;
+}
+
+.image-zoom-container:hover .image-zoom {
+    transform: scale(1.1);
+}
+
+
+/* Club Badge Shine Effect */
+.club-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.club-badge::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transform: translateX(-100%);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    to {
+        transform: translateX(100%);
+    }
+}
