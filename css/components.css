@@ -53,6 +53,47 @@
     color: var(--white);
 }
 
+/* Boutons outline dans les cards produits - texte sombre pour lisibilité */
+.card-product .btn-outline,
+.product-content .btn-outline {
+    color: var(--gray-dark);
+    border: 2px solid var(--gray-dark);
+}
+
+.card-product .btn-outline:hover,
+.product-content .btn-outline:hover {
+    background: var(--gray-dark);
+    color: var(--white);
+}
+
+/* Boutons outline dans les sections services - texte sombre pour lisibilité */
+.service-detail .btn-outline,
+.service-detail-content .btn-outline,
+.cta-section .btn-outline,
+section:not(.section-gray) .btn-outline {
+    color: var(--gray-dark);
+    border: 2px solid var(--gray-dark);
+}
+
+.service-detail .btn-outline:hover,
+.service-detail-content .btn-outline:hover,
+.cta-section .btn-outline:hover,
+section:not(.section-gray) .btn-outline:hover {
+    background: var(--gray-dark);
+    color: var(--white);
+}
+
+/* Boutons outline dans les cards distributeur - texte sombre pour lisibilité */
+.store-card .btn-outline {
+    color: var(--gray-dark);
+    border: 2px solid var(--gray-dark);
+}
+
+.store-card .btn-outline:hover {
+    background: var(--gray-dark);
+    color: var(--white);
+}
+
 .btn-large {
     padding: 18px 40px;
     font-size: var(--font-size-md);
