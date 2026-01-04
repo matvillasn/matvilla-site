@@ -123,36 +123,72 @@
         overflow-y: auto; /* Garde le scroll vertical principal */
     }
 
-    /* === SUPPRESSION DES SCROLLBARS INDÉSIRABLES === */
-    /* Supprimer les scrollbars sur les containers et sections */
+    /* === SUPPRESSION DÉFINITIVE DES SCROLLBARS VERTICALES === */
+    /* Règle globale pour TOUTES les sections et leurs contenus */
+    section,
+    section *,
+    section .container,
+    section .container *,
+    section .grid,
+    section .grid *,
+    section .grid-2,
+    section .grid-2 *,
+    section .grid-3,
+    section .grid-3 *,
+    section .grid-4,
+    section .grid-4 *,
+    section .card,
+    section .card *,
+    section .store-card,
+    section .store-card *,
+    section .section-header,
+    section .section-header *,
+    section .club-content,
+    section .club-content *,
+    section .testimonial-card,
+    section .testimonial-card *,
+    section .steps-container,
+    section .steps-container *,
+    section .step-item,
+    section .step-item *,
+    section .faq-item,
+    section .faq-item *,
+    section .store-info,
+    section .store-info *,
+    section .product-content,
+    section .product-content *,
+    section .service-detail,
+    section .service-detail *,
+    section .service-detail-content,
+    section .service-detail-content *,
+    section .service-detail-image,
+    section .service-detail-image *,
+    section .club-section,
+    section .club-section *,
+    section .club-hero,
+    section .club-hero *,
+    section div[style],
+    section div[style] *,
     .container,
     .hero,
     .page-header,
-    section,
     .card,
     .store-card,
     .contact-info-card,
-    .cta-section {
+    .cta-section,
+    .grid,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    form,
+    .form-group {
         overflow-y: visible !important;
         overflow-x: hidden !important;
+        max-height: none !important;
     }
 
     .container, .hero, .page-header, section {
         max-width: 100%;
-    }
-
-    /* Supprimer les scrollbars sur les grids */
-    .grid,
-    .grid-2,
-    .grid-3,
-    .grid-4 {
-        overflow: visible !important;
-    }
-
-    /* Supprimer les scrollbars sur les formulaires */
-    form,
-    .form-group {
-        overflow: visible !important;
     }
 
     .contact-content, .contact-form {
@@ -247,11 +283,19 @@
         gap: var(--spacing-xs) !important;
     }
 
-    /* CRITIQUE : Exclure le menu des règles overflow */
-    .nav {
+    /* CRITIQUE : Exclure le menu des règles overflow - DOIT RESTER EN DERNIER */
+    .nav,
+    .nav * {
         overflow-x: visible !important;
         overflow-y: auto !important;
         max-width: none !important;
+    }
+    
+    /* Exception absolue pour le menu mobile - priorité maximale */
+    header .nav,
+    #header .nav,
+    .nav.active {
+        overflow-y: auto !important;
     }
 
     /* === PRODUITS - CENTRAGE === */
@@ -329,13 +373,16 @@
 
     /* Liens du menu */
     .nav-link {
-        padding: 15px 0 !important;
+        padding: 15px 20px !important;
         border-bottom: 1px solid #E8E8E8;
         color: var(--gray-dark) !important;
         font-size: 16px !important;
         text-align: left;
         width: 100%;
         display: block !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        position: relative;
     }
 
     .nav-link:last-child {
@@ -344,6 +391,24 @@
 
     .nav-link::after {
         display: none !important;
+    }
+
+    /* Indicateur de page active - Mobile */
+    .nav-link.active {
+        color: var(--orange-primary) !important;
+        background: var(--orange-lighter) !important;
+        font-weight: var(--font-weight-semibold) !important;
+        border-left: 4px solid var(--orange-primary) !important;
+    }
+
+    .nav-link.active::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: var(--orange-primary);
     }
 
     /* Header fixe */
