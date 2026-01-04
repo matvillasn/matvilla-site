@@ -22,7 +22,7 @@ body {
     line-height: 1.6;
     color: var(--dark);
     background-color: var(--white);
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 /* === TYPOGRAPHIE === */

@@ -101,7 +101,35 @@
 
     /* === CONTAINER === */
     .container {
-        padding: 0 var(--spacing-sm);
+        padding: 0 20px !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* === SCROLL HORIZONTAL - CORRECTION === */
+    * {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .contact-content, .contact-form {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* === PRODUITS - CENTRAGE === */
+    .products-grid, .product-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .product-card {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     /* === HEADER === */
@@ -158,9 +186,13 @@
     }
 
     /* === HERO === */
-    .hero {
-        min-height: 80vh;
-        padding-top: 70px;
+    .hero, .page-header {
+        padding-top: 100px !important;
+        min-height: auto !important;
+    }
+
+    .hero h1, .page-header h1 {
+        margin-top: 20px !important;
     }
 
     .hero-title {
@@ -207,9 +239,29 @@
     }
 
     /* === BUTTONS === */
+    .btn, .cta-button, button[type="submit"] {
+        font-size: 14px !important;
+        padding: 12px 20px !important;
+        white-space: nowrap !important;
+        min-width: auto !important;
+        width: auto !important;
+        max-width: 100% !important;
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 13px !important;
+        padding: 10px 16px !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    .product-card .btn {
+        font-size: 13px !important;
+        padding: 10px 15px !important;
+    }
+
     .btn-large {
-        padding: 16px 24px;
-        font-size: var(--font-size-sm);
+        padding: 12px 20px !important;
+        font-size: 14px !important;
     }
 
     /* === CARDS === */
@@ -323,7 +375,7 @@
 
     /* === PAGE HEADER === */
     .page-header {
-        padding: calc(70px + var(--spacing-md)) 0 var(--spacing-md);
+        padding: 100px 20px var(--spacing-md) 20px !important;
     }
 
     .page-header-description {
