@@ -3,6 +3,16 @@
    Breakpoints : Mobile < 768px | Tablette 768-1024px | Desktop > 1024px
    ================================ */
 
+/* ================================
+   RÈGLE D'OR : Seul le <body> doit scroller !
+   ================================ */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* AUCUN autre élément ne doit avoir overflow: auto/scroll sauf le menu mobile */
+
 /* ===========================
    TABLETTE (768px - 1024px)
    =========================== */
@@ -124,11 +134,14 @@
     }
 
     /* === SUPPRESSION DÉFINITIVE DES SCROLLBARS VERTICALES === */
-    /* Règle globale pour TOUTES les sections et leurs contenus */
+    /* RÈGLE D'OR : Seul le <body> doit scroller ! */
+    /* Empêcher les scrolls internes sur TOUTES les sections */
     section,
     section *,
     section .container,
     section .container *,
+    section .section-content,
+    section .section-content *,
     section .grid,
     section .grid *,
     section .grid-2,
@@ -181,19 +194,77 @@
     .grid-3,
     .grid-4,
     form,
-    .form-group {
+    .form-group,
+    /* Classes spécifiques mentionnées */
+    .benefits-grid,
+    .benefits-grid *,
+    .testimonials,
+    .testimonials *,
+    .distributors-grid,
+    .distributors-grid *,
+    .history-content,
+    .history-content *,
+    .tools-section,
+    .tools-section *,
+    .advantages-section,
+    .advantages-section *,
+    .join-section,
+    .join-section *,
+    .how-to-join,
+    .how-to-join * {
+        overflow: visible !important;
         overflow-y: visible !important;
         overflow-x: hidden !important;
         max-height: none !important;
+        height: auto !important;
     }
 
     .container, .hero, .page-header, section {
         max-width: 100%;
     }
 
+    /* MOBILE - Forcer visibilité complète sur les sections */
+    section,
+    section .section-content,
+    section .container {
+        overflow: visible !important;
+        max-height: none !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    /* Grids doivent s'adapter, pas scroller */
+    .benefits-grid,
+    .testimonials,
+    .distributors-grid,
+    .grid,
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        display: grid !important;
+        flex-direction: column;
+        gap: 20px;
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    /* Vérifier les cards individuelles */
+    .card,
+    .benefit-card,
+    .testimonial-card,
+    .distributor-card,
+    .store-card {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
     .contact-content, .contact-form {
         max-width: 100% !important;
         overflow-x: hidden !important;
+        overflow-y: visible !important;
     }
 
     /* === SECTION FORMULAIRE DE CONTACT === */
@@ -524,6 +595,10 @@
     /* === CARDS === */
     .card {
         padding: var(--spacing-md);
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
     }
 
     .card img {
