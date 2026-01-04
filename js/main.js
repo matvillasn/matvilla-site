@@ -33,6 +33,7 @@ if (menuToggle && nav) {
   menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
     nav.classList.toggle('active');
+    document.body.classList.toggle('nav-open');
   });
 
   // Fermer le menu en cliquant sur un lien
@@ -41,6 +42,7 @@ if (menuToggle && nav) {
     link.addEventListener('click', () => {
       menuToggle.classList.remove('active');
       nav.classList.remove('active');
+      document.body.classList.remove('nav-open');
     });
   });
 
@@ -49,6 +51,7 @@ if (menuToggle && nav) {
     if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
       menuToggle.classList.remove('active');
       nav.classList.remove('active');
+      document.body.classList.remove('nav-open');
     }
   });
 }

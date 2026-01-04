@@ -62,7 +62,7 @@ section.section-gray {
 }
 
 /* === HEADER === */
-.header {
+.header, #header {
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +71,7 @@ section.section-gray {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
-    z-index: 1000;
+    z-index: 1001 !important;
     transition: var(--transition-base);
 }
 
