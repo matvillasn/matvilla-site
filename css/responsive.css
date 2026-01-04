@@ -161,10 +161,19 @@
         transition: right var(--transition-base);
         z-index: 999;
         overflow-y: auto;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
     }
 
     .nav.active {
-        right: 0;
+        right: 0 !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateX(0) !important;
     }
 
     .nav-link,
