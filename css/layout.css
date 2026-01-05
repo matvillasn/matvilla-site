@@ -62,7 +62,7 @@ section.section-gray {
 }
 
 /* === HEADER === */
-.header, #header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +71,7 @@ section.section-gray {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
-    z-index: 1001 !important;
+    z-index: 1000;
     transition: var(--transition-base);
 }
 
@@ -93,10 +93,6 @@ section.section-gray {
 .nav-link {
     font-weight: var(--font-weight-medium);
     position: relative;
-    padding: 8px 16px;
-    border-radius: var(--radius-sm);
-    transition: var(--transition-fast);
-    color: var(--gray-dark);
 }
 
 .nav-link::after {
@@ -110,26 +106,9 @@ section.section-gray {
     transition: var(--transition-fast);
 }
 
-.nav-link:hover {
-    color: var(--orange-primary);
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* Indicateur de page active - Desktop */
-.nav-link.active {
-    color: var(--orange-primary);
-    background: var(--orange-lighter);
-    font-weight: var(--font-weight-semibold);
-}
-
+.nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
-    height: 3px;
-    background: var(--orange-primary);
-    bottom: -2px;
 }
 
 /* === LOGO === */
