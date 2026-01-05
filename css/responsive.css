@@ -295,6 +295,64 @@
       font-size: 28px;
     }
     
+    /* === FORMULAIRE DE CONTACT === */
+    #contact-form .grid-2 {
+      grid-template-columns: 1fr !important;
+      gap: var(--spacing-sm) !important;
+    }
+    
+    #contact-form .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    #contact-form .form-input,
+    #contact-form .form-textarea,
+    #contact-form .form-select {
+      width: 100%;
+      font-size: var(--font-size-sm);
+      padding: 12px 16px;
+    }
+    
+    #contact-form h2 {
+      font-size: var(--font-size-xl);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    #contact-form p {
+      font-size: var(--font-size-sm);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    /* === COORDONNÉES === */
+    .contact-info-card {
+      flex-direction: column !important;
+      text-align: center !important;
+      padding: var(--spacing-md) !important;
+      margin-bottom: var(--spacing-md) !important;
+    }
+    
+    .contact-info-icon {
+      width: 50px !important;
+      height: 50px !important;
+      font-size: 24px !important;
+      margin: 0 auto var(--spacing-sm) !important;
+    }
+    
+    .contact-info-card h3 {
+      font-size: var(--font-size-md) !important;
+      margin-bottom: var(--spacing-xs) !important;
+    }
+    
+    .contact-info-card p {
+      font-size: var(--font-size-sm) !important;
+      line-height: 1.6 !important;
+    }
+    
+    .contact-info-card .social-link {
+      font-size: var(--font-size-xs) !important;
+      padding: 8px 12px !important;
+    }
+    
     /* === FORMULAIRES === */
     .form-group {
       margin-bottom: var(--spacing-sm);
